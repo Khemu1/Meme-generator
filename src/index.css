@@ -1,13 +1,85 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background-color: #eee;
+}
+#root {
+	margin: auto;
+	width: 100%;
+	display: flex;
+}
+.parent {
+	margin: auto;
+	width: 550px;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+}
+nav {
+	display: flex;
+	width: 100%;
+	background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+	color: white;
+}
+nav .container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 10px;
+	width: 100%;
+}
+.container .left {
+	display: flex;
+	align-items: center;
+	margin-right: auto;
+	gap: 15px;
+	text-transform: capitalize;
+}
+.meme-area .container {
+	display: flex;
+	flex-direction: column;
+	padding: 30px 0px;
+	gap: 50px;
+}
+.form {
+	display: grid;
+	justify-content: center;
+	grid-template: 35px 35px / 1fr 1fr;
+	gap: 25px;
+	padding: 0px 45px;
+}
+.form input {
+	border: 1px solid rgba(128, 128, 128, 0.418);
+	border-radius: 5px;
+}
+.form button {
+	grid-column: 1/-1;
+	cursor: pointer;
+	border: 1px solid rgba(128, 128, 128, 0.418);
+	border-radius: 5px;
+	background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+	color: white;
+}
+.pic {
+	width: 477px;
+	height: 268px;
+	flex-shrink: 0;
+	margin: auto;
+	position: relative;
+	color: white;
+}
+.pic img {
+	width: 100%;
+	height: 100%;
+}
+.pic .bottom {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.pic .top {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
 }
